@@ -1,10 +1,18 @@
-Future<void> main() async {
-  print('Fetching username...');
-  var username = fetchUsername();
-  print('You are logged in as $username');
-  print('Welcome!');
+import 'dart:io';
+
+void main(List<String> args) {
+  var mobil = Car('red', 'gassoline', 89, 180);
 }
 
-Future<String> fetchUsername() {
-  return Future.delayed(Duration(seconds: 3), () => 'DartUser');
+class Car {
+  String color;
+  String fuelType;
+  int speed;
+  int maxSpeed;
+
+  Car(this.color, this.fuelType, this.speed, this.maxSpeed);
+
+  void accelerate() {}
+  void brake() {}
+  void refuel(num liters) {}
 }
